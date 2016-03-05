@@ -46,6 +46,7 @@ body {
 .container {
 	max-width: 750px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 .container form {
@@ -66,7 +67,30 @@ body {
 	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	padding: 5px;
+	padding: 10px 15px 11px !important;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 	box-sizing: content-box;
 	font-family: "PressStart";
+}
+
+.input-login, .input-register {
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	width: auto;
+	font-size: 14px;
+	border: 1px solid white;
+}
+
+.input-login {
+	background-color: #6EBE59;
+}
+
+.input-register {
+	background-color: #FFE15F;
 }

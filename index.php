@@ -25,13 +25,13 @@ include('include/connexion.inc.php');
 				
 				<input type="text" placeholder="Pseudo" name="login_pseudo" required>
 				<input type="password" name="login_password" placeholder="Mot de Passe" required>
-				<input type="submit" value="Se Connecter" name="login">
+				<input type="submit" value="Se Connecter" name="login" class="input-login">
 			</form>
 			<form action="" method="post" id="inscription" class="register">
 				
 				<input type="text" placeholder="Pseudo" name="register_pseudo">
 				<input type="password" placeholder="Mot de Passe" name="register_password">
-				<input type="submit" value="S'inscrire" name="register">
+				<input type="submit" value="S'inscrire" name="register" class="input-register">
 			</form>
 
 			<div class="erreur">
