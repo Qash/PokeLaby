@@ -1,22 +1,19 @@
 <!doctype html>
-
-<?php
-include('include/connexion.inc.php');
-?>
-
 <html lang="fr">
+<?php
+	include('include/connexion.inc.php');
+?>
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8"/>
 	<title>PokeLaby</title>
-	<link rel="stylesheet" href="Styles/Css/styles.css">
-	<script src="Styles/Js/script.js"></script>
+	<link rel="stylesheet" href="Styles/Css/global.css"/>
+	<link rel="stylesheet" href="Styles/Css/index.css"/>	
 </head>
 
 <body>
 
 	<header class="header">
 		<img src="Images/Logo-PokeLaby-Darkblue.png" alt="Logo Poke Laby">
-
 	</header>
 
 	<div class="main-container">
@@ -25,13 +22,13 @@ include('include/connexion.inc.php');
 				
 				<input type="text" placeholder="Pseudo" name="login_pseudo" required>
 				<input type="password" name="login_password" placeholder="Mot de Passe" required>
-				<input type="submit" value="Se Connecter" name="login" class="input-login">
+				<input type="submit" value="Se Connecter" name="login" class="submit input-login">
 			</form>
 			<form action="" method="post" id="inscription" class="register">
 				
 				<input type="text" placeholder="Pseudo" name="register_pseudo">
 				<input type="password" placeholder="Mot de Passe" name="register_password">
-				<input type="submit" value="S'inscrire" name="register" class="input-register">
+				<input type="submit" value="S'inscrire" name="register" class="submit input-register">
 			</form>
 
 			<div class="erreur">
@@ -60,7 +57,11 @@ include('include/connexion.inc.php');
 					if($i==0){
 						session_start();
 						$_SESSION['user'] = $login_pseudo;
-						header('location:loby.php');
+						echo "<script type='text/javascript'>
+								var sessionUser = '".$_SESSION['user']."';
+								sessionStorage.setItem('sessionUser', sessionUser);
+								window.location = 'lobby.html';
+							</script>";
 						exit();
 					}
 
@@ -74,6 +75,7 @@ include('include/connexion.inc.php');
 				}
 
 				?>
+
 				<?php
 
 				if(isset($_POST['register'])){
@@ -102,7 +104,11 @@ include('include/connexion.inc.php');
 						$query->execute(array (':register_pseudo' => $register_pseudo, ':register_password' => $register_password));
 						session_start();
 						$_SESSION['user'] = $register_pseudo;
-						header('location:loby.php');
+						echo "<script type='text/javascript'>
+								var sessionUser = '".$_SESSION['user']."';
+								sessionStorage.setItem('sessionUser', sessionUser);
+								window.location = 'lobby.html';
+							</script>";
 						exit();
 					}
 

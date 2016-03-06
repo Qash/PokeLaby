@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>PokeLaby</title>
+	<link rel="stylesheet" href="Styles/Css/global.css">
+	<link rel="stylesheet" href="Styles/Css/launchGame.css">
+	
+</head>
+
+<body class="launchGame">
+	<header class="header">
+		<img src="Images/Logo-PokeLaby-Darkblue.png" alt="Logo Poke Laby">
+	</header>
+
+	<div class="main-container">
+		<div class="container">
+			<button class="submit launchButton">Je ne suis pas prêt !</button>
+			<button class="submit quitButton">Quitter la partie</button>
+		</div>
+
+		<div class="aside">
+			<div class="listPlayers">
+				<h2>Nom de la partie</h2>
+				<div class="player pikachu">
+					<div class="state"></div>
+					<img src="./Images/pikachu.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player salameche">
+					<div class="state stateReady"></div>
+					<img src="./Images/salameche.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player bulbizarre">
+					<div class="state"></div>
+					<img src="./Images/bulbizarre.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player carapuce">
+					<div class="state"></div>
+					<img src="./Images/carapuce.png" alt="">
+					<p>Qash</p>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		Jeu développé par Hadrien Chevallier et Laura Jonin
+	</footer>
+
+	<script>
+	var launchButton = document.querySelector('.launchButton');
+		launchButton.addEventListener('click', function(){
+			launchButton.classList.toggle('ready');
+			if(launchButton.classList.contains('ready')){
+				launchButton.innerHTML = "Je suis prêt";
+			}
+			else {
+				launchButton.innerHTML = "Je ne suis pas prêt";
+			}
+		});
+
+	var quitButton = document.querySelector('.quitButton');
+	quitButton.addEventListener('click', function(){
+		window.location = 'lobby.html';
+	});
+	</script>
+</body>
+
+</html>

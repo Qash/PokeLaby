@@ -6,7 +6,7 @@
 }
 
 
-body {
+body, html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -39,35 +39,14 @@ body {
 	background-color: #00051d;
 }
 
-.main-container {
-	width: 100%;
-}
-
-.container {
-	max-width: 750px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.container form {
-	display: inline-block;
-	width: 300px;
-	text-align: center;
-	margin-top: 100px;
-	padding: 15px;
-	border-radius: 10px;
-	border: 2px solid white;
-	background-color: #00051d;
-}
-
-.container form input {
+input, select, .create, .join, .launchButton, .quitButton {
 	display: block;
 	text-align: center;
 	width: 200px;
 	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	padding: 10px 15px 11px !important;
+	padding: 10px 15px 11px;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -75,7 +54,7 @@ body {
 	font-family: "PressStart";
 }
 
-.input-login, .input-register {
+.submit {
 	font-weight: bold;
 	color: #ffffff;
 	cursor: pointer;
@@ -87,10 +66,6 @@ body {
 	border: 1px solid white;
 }
 
-.input-login {
-	background-color: #6EBE59;
-}
-
-.input-register {
-	background-color: #FFE15F;
+.input-logout {
+	background-color: #FF633A;
 }

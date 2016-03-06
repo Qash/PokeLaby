@@ -1,0 +1,71 @@
+.launchGame .main-container {
+	width: 100%;
+	padding-top: 75px;
+}
+
+.launchGame .container {
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.launchGame .aside {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.launchGame .aside .listPlayers {
+	width: 100%;
+	background-color: DarkGrey;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.launchGame .aside .listPlayers .player {
+	width: 100%;
+	background-color: DarkGrey;
+}
+
+.launchGame .aside .listPlayers .player.pikachu { background-color: #FFE15F ; }
+.launchGame .aside .listPlayers .player.bulbizarre { background-color: #6EBE59 ; }
+.launchGame .aside .listPlayers .player.carapuce { background-color: #4F91C0 ; }
+.launchGame .aside .listPlayers .player.salameche { background-color: #FF633A ; }
+
+.launchGame .aside .listPlayers .player img, .launchGame .aside .listPlayers .player p, .launchGame .aside .listPlayers .player .state {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.launchGame .aside .listPlayers .player .state {
+	margin-left: 20px;
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.launchGame .aside .listPlayers .player .state.stateReady { background-color: green; }
+
+.launchGame .launchButton, .launchGame .quitButton {
+	width: 300px;
+	padding: 25px;
+	outline: 0;
+}
+
+.launchGame .launchButton {
+	color: #6EBE59;
+	border: 2px solid #6EBE59;
+	background-color: transparent;
+	margin-bottom: 75px;
+}
+
+.launchGame .launchButton.ready {
+	color: white;
+	background-color: #6EBE59;
+}
+
+.launchGame .quitButton {
+	background-color: #FF633A;
+}

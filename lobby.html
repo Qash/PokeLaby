@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>PokeLaby</title>
+	<link rel="stylesheet" href="Styles/Css/global.css">
+	<link rel="stylesheet" href="Styles/Css/loby.css">
+	
+</head>
+
+<body class="lobby">
+
+	<header class="header">
+		<img src="Images/Logo-PokeLaby-Darkblue.png" alt="Logo Poke Laby">
+	</header>
+
+	<div class="main-container">
+		<div>
+			<form metdod="post" action="">
+				<input class="submit input-logout" type="submit" value="Se déconnecter" name="deco" />
+			</form>
+		</div>
+
+		<div class="container">
+			<div class="table-game">
+				<table>
+					<thead>
+						<th>Nom de la partie</th>
+						<th>Nb max</th>
+						<th>Nb connecté</th>
+						<th></th>
+					</thead>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					<tr>
+						<td>Je fais des gaufres</td>
+						<td>4</td>
+						<td class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="table-users">
+				<table>
+					<thead>
+						<th>Pseudo</th>
+					</thead>
+					<tr>
+						<td>MelleOswald</td>
+					</tr>
+				</table>
+			</div>
+			<button type="button" class="submit create">Créer une partie</button>
+
+			<div class="popin overlay createGame-popin">
+				<div class="container-popin">
+					<div class="close">X</div>
+					<form action="">
+						<label for="gameName">Nom de la partie</label>
+						<input type="text" name="gameName">
+						<label for="nbJoueurMax">Nombre de joueurs</label>
+						<select name="nbJoueurMax">
+							<option value="2">2 joueurs</option>
+							<option value="3">3 joueurs</option>
+							<option value="4">4 joueurs</option>
+						</select>
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+
+
+			<div class="popin overlay error-popin">
+				<div class="container-popin">
+					<div class="close">X</div>
+					<p>ERREUR</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	
+
+	<footer class="footer">
+		Jeu développé par Hadrien Chevallier et Laura Jonin
+	</footer>
+	<script>
+		document.querySelector('.submit.create').addEventListener('click', function(){
+			document.querySelector('.createGame-popin').classList.add('visible');
+		});
+
+		document.querySelector('.createGame-popin .close').addEventListener('click', function(){
+			document.querySelector('.createGame-popin').classList.remove('visible');
+		});
+
+		[].slice.call(document.querySelectorAll('.join')).forEach(function(btn){
+			btn.addEventListener('click', function() {
+				window.location = "launchGame.html";
+			});
+		});
+	</script>
+</body>
+
+</html>
