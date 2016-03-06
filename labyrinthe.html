@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>PokeLaby</title>
+	<link rel="stylesheet" href="Styles/Css/global.css">
+	<link rel="stylesheet" href="Styles/Css/labyrinthe.css">
+	
+</head>
+
+<body class="labyrinthe">
+	<audio autoplay loop>
+	  <source src="Mp3/pokemon-theme.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+	<header class="header">
+		<img src="Images/Logo-PokeLaby-Darkblue.png" alt="Logo Poke Laby">
+	</header>
+
+	<div class="main-container">
+		<div class="container">
+			<canvas width="500" height="500" class="labyCanvas"></canvas>
+		</div>
+
+		<div class="aside">
+			<div class="listPlayers">
+				<h2>Nom de la partie</h2>
+				<div class="player pikachu">
+					<div class="state"></div>
+					<img src="./Images/pikachu.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player salameche">
+					<div class="state stateReady"></div>
+					<img src="./Images/salameche.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player bulbizarre">
+					<div class="state"></div>
+					<img src="./Images/bulbizarre.png" alt="">
+					<p>MelleOswald</p>
+					
+				</div>
+				<div class="player carapuce">
+					<div class="state"></div>
+					<img src="./Images/carapuce.png" alt="">
+					<p>Qash</p>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="popin overlay win-popin ">
+			<div class="container-popin">
+				<div class="close">X</div>
+				<img src="./Images/win.gif" alt="">
+				<p><span>Qash</span> a gagné.</p>
+			</div>
+		</div>
+
+		<div class="popin overlay lose-popin ">
+			<div class="container-popin">
+				<div class="close">X</div>
+				<img src="./Images/lose.jpg" alt="">
+				<p><span>MelleOswald</span> est K.O.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		Jeu développé par Hadrien Chevallier et Laura Jonin
+	</footer>
+</body>
+
+</html>
