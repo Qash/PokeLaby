@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'PressStart';
+  src: 	url('../Fonts/PressStart2P.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: GhostWhite;
+	font-family: 'PressStart';
+}
+*[data-template]{
+	display: none;
+}
+.header {
+	position: relative;
+	width: 100%;
+	padding-top: 15px;
+}
+
+.header img {
+	max-width: 500px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	background-color: #00051d;
+}
+
+input, select, .create, .join, .launchButton, .quitButton {
+	display: block;
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 15px 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-sizing: content-box;
+	font-family: "PressStart";
+}
+
+.submit {
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	width: auto;
+	font-size: 14px;
+	border: 1px solid white;
+}
+
+.input-logout {
+	background-color: #FF633A;
+}
+
+.aside {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.aside .listPlayers {
+	width: 100%;
+	background-color: DarkGrey;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.aside .listPlayers .player {
+	width: 100%;
+	background-color: DarkGrey;
+}
+
+.aside .listPlayers .player.pikachu { background-color: #FFE15F ; }
+.aside .listPlayers .player.bulbizarre { background-color: #6EBE59 ; }
+.aside .listPlayers .player.carapuce { background-color: #4F91C0 ; }
+.aside .listPlayers .player.salameche { background-color: #FF633A ; }
+
+.aside .listPlayers .player img, .aside .listPlayers .player p, .aside .listPlayers .player .state {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.aside .listPlayers .player .state {
+	margin-left: 20px;
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.aside .listPlayers .player .state.stateReady { background-color: green; }
+
+.popin.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+}
+
+.popin.visible {
+	display: block;
+}
+
+.container-popin {
+	position: absolute;
+	width: 500px;
+	padding: 30px 10px;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	border-radius: 10px;
+}
+
+.container-popin .close {
+	font-size: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: red;
+	font-weight: 900;
+	cursor: pointer;
+}

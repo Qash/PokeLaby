@@ -1,0 +1,36 @@
+.labyrinthe .main-container {
+	width: 100%;
+	padding-top: 75px;
+}
+
+.labyrinthe .container {
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.labyrinthe .labyCanvas {
+	display: block;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+.labyrinthe .popin .container-popin {
+	top: 24.5%;
+	padding-bottom: 10px;
+}
+
+.labyrinthe .popin p {
+	border-style: double;
+	height: 40px;
+	line-height: 40px;
+	padding: 10px;
+}
+
+.labyrinthe .lose-popin img {
+	max-width: 100%;
+	height: auto;
+	margin-top: 15px;
+}

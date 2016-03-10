@@ -1,0 +1,66 @@
+.lobby {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.lobby .container {
+	width: 1500px;
+	background-color: silver;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px 20px;
+	margin-top: 50px;
+}
+
+.lobby .table-game, .lobby .table-users {
+	display: inline-block;
+	width: 650px;
+	max-height: 300px;
+	overflow: auto;
+	text-align: center;
+	font-family: 'Lucida Sans Unicode';
+	font-size: 13px;
+	background-color: Gray;
+	color: white;
+	vertical-align: top;
+	border-radius: 10px;
+	border: 2px solid white;
+}
+
+.lobby table {
+	width: 100%;
+}
+
+.lobby table thead {
+	background-color: DimGray;
+}
+
+.lobby table th, .lobby table td {
+	padding: 5px;
+}
+
+.lobby .table-game {
+
+}
+
+.lobby .table-users {
+
+}
+
+.lobby .join {
+	background-color: #4F91C0;
+	padding: 8px;
+	font-size: 10px;
+}
+
+.lobby .create {
+	display: block;
+	background-color: #4F91C0;
+	margin-top: 80px;
+}
+
+.lobby .error-popin {
+	color: red;
+	font-weight: 900;
+}

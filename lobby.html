@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>PokeLaby</title>
+	<link rel="stylesheet" href="Styles/Css/global.css">
+	
+</head>
+
+<body class="lobby">
+	{{params}}
+	<header class="header">
+		<img src="http://localhost/PokeLabTest/Images/Logo-PokeLaby-Darkblue.png" alt="Logo Poke Laby">
+	</header>
+	<div class="main-container">
+		<div>
+			<form metdod="post" action="">
+				<input class="submit input-logout" type="submit" value="Se déconnecter" name="deco" />
+			</form>
+		</div>
+		<div class="container">
+			<div class="table-game">
+				<table>
+					<thead>
+						<th>Nom de la partie</th>
+						<th>Nb max</th>
+						<th>Nb connecté</th>
+						<th></th>
+					</thead>
+					<tr data-template='game'>
+						<td data-templateField="gameId"></td>
+						<td data-templateField="maxPlayers"></td>
+						<td data-templateField="nbConPlyrs" class="nbPlayerConnected">2</td>
+						<td><button class="submit join">Rejoindre</button></td>
+					</tr>
+					
+				</table>
+			</div>
+			<div class="table-users">
+				<table>
+					<thead>
+						<th>Pseudo</th>
+					</thead>
+					
+				</table>
+			</div>
+			<button type="button" class="submit create">Créer une partie</button>
+
+			<div class="popin overlay createGame-popin">
+				<div class="container-popin">
+					<div class="close">X</div>
+					<label for="gameName">Nom de la partie</label>
+					<input type="text" name="gameName">
+					<label for="nbJoueurMax">Nombre de joueurs</label>
+					<select name="nbJoueurMax">
+						<option value="2">2 joueurs</option>
+						<option value="3">3 joueurs</option>
+						<option value="4">4 joueurs</option>
+					</select>
+					<button id="createGame">Valider</button>
+				</div>
+			</div>
+			<div class="popin overlay error-popin">
+				<div class="container-popin">
+					<div class="close">X</div>
+					<p>ERREUR</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		Jeu développé par Hadrien Chevallier et Laura Jonin
+	</footer>
+</body>
+
+</html>

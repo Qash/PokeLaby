@@ -1,7 +1,40 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>Un labyrinthe avec canvas</title>
+	<meta charset="utf-8" />
+	<script src="node/node_modules/socket.io-client/socket.io.js"></script>
+	<link rel="stylesheet" href="http://localhost/PokeLabTest/Styles/Css/global.css">
+	<link rel="stylesheet" href="http://localhost/PokeLabTest/Styles/Css/loby.css">
+	<link rel="stylesheet" href="http://localhost/PokeLabTest/Styles/Css/labyrinthe.css">
+	<script>
+	window.socket = io.connect('http://localhost:8080');
+	window.socket.on('uGotRedirected', function(data){
+		console.log('WOW');
+		var parser = new DOMParser();
+		window.doc = parser.parseFromString(data.body, "text/html");
+		var bodyContent = doc.body.innerHTML;
+		document.querySelector('body').innerHTML = bodyContent;
+		document.querySelector('body').setAttribute('class',doc.body.getAttribute('class'));
+		var script = document.createElement('script');
+		script.setAttribute('src',doc.body.getAttribute('class')+'.js');
+		document.querySelector('head').appendChild(script);
+		if(doc.body.getAttribute('class')==='launchGame'){
+			updateGame(data.datas.game);
+		}
+		else if(doc.body.getAttribute('class')==='labyrinthe'){
+			console.log('WOW laby');
+			socket.emit('launchGame', {size:10, gameName:data.datas.gameId});
+		}
+	});
+	</script>
 </head>
 <body>
-<h1>HOME</h1>
-</body>
+	<script type="text/javascript">
+	if(document.querySelector('[name=param--username]')!==null)
+		window.socket.emit('ident',document.querySelector('[name=param--username]').value);
+	else
+		window.location = 'http://localhost/PokeLabTest'
+	</script>
+</body> 
 </html>
